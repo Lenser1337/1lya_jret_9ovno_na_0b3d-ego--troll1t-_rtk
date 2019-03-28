@@ -4,7 +4,8 @@
   "main": "bot.js",
   "dependencies": {
     "discord.js": "^11.4.2",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "start": "^5.1.0"
   },
   "devDependencies": {},
   "scripts": {
