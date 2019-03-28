@@ -7,6 +7,20 @@ let config = require('./botconfig.json');
 let token = config.token;
 let prefix = config.prefix;
 let profile = require('./profile.json');
+const express = require('express');
+const exphbs = require('express-handlebars');
+const app = express();
+
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+
+app.set('view engine', 'handlebars');
+
+app.use(express.static('public'));
+
+app.listen(process.env.PORT || 8080, () =>
+  console.log("[app.js] Сайт запущен")
+  );
+
 fs.readdir('./cmds/',(err,files)=>{
     if(err) console.log(err);
     let jsfiles = files.filter(f => f.split(".").pop() === "js");
@@ -31,7 +45,7 @@ bot.on('ready', () => {
             let guildid = bot.mutes[i].guild;
             let guild = bot.guilds.get(guildid);
             let member = guild.members.get(i);
-            let muteRole = member.guild.roles.find(r => r.name === "Muted"); 
+            let muteRole = member.guild.roles.find(r => r.name === "Muted");
             if(!muteRole) continue;
 
             if(Date.now()>= time){

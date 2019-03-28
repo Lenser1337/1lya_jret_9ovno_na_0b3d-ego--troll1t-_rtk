@@ -4,6 +4,7 @@
   "main": "bot.js",
   "dependencies": {
     "discord.js": "^11.4.2",
+    "express-handlebars": "^3.0.2",
     "fs": "0.0.1-security",
     "start": "^5.1.0"
   },
