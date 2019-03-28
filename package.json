@@ -1,0 +1,23 @@
+{
+  "name": "mybot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kotya",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lenser1337/1lya_jret_9ovno_na_0b3d-ego--troll1t-_rtk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lenser1337/1lya_jret_9ovno_na_0b3d-ego--troll1t-_rtk/issues"
+  },
+  "homepage": "https://github.com/Lenser1337/1lya_jret_9ovno_na_0b3d-ego--troll1t-_rtk#readme",
+  "description": ""
+}
