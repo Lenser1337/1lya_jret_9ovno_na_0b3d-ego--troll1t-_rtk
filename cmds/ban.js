@@ -3,9 +3,9 @@ const fs = require("fs");
 let profile = require("../profile.json");
 module.exports.run = async (bot,message,args) => {
     try{
-     
-    if(!message.member.roles.some(r=>["Бамен", "Тупа Дебил"].includes(r.name)))
-    return;    
+
+    if(!message.member.roles.some(r=>["Бармен", "Тупа Дебил"].includes(r.name)))
+    return;
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("У вас нет прав");
     let rUser = bot.rUser;
     if(!args[0]) return bot.send("Вы не указали пользователя");
@@ -15,7 +15,7 @@ module.exports.run = async (bot,message,args) => {
     .setColor('#e22216')
     .addField("Администратор",message.author.username)
     .addField("Забанил",`${rUser.user.username}`);
-    
+
     message.guild.member(rUser).ban("Бан");
     message.channel.send(embed);
     }catch(err){
